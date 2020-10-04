@@ -37,7 +37,6 @@ body{
     margin-top: -25px;
     width: 360px;
     font-weight: 500;
-    filter: drop-shadow(0px 1px 40px black);
 }
 .app-logo-sub-header{
     font-size: 62px;
@@ -176,7 +175,12 @@ body{
 .win-sub-header-demo-button{
     width: 240px;
     object-fit: contain;
-    margin-top: -25px;
+    margin-top: -28px;
+    box-shadow: 0 10px 20px #555;
+    transition: .2s;
+}
+.win-sub-header-demo-button:hover{
+    box-shadow: 0 15px 25px #555;
 }
 .win-img-framework-icons-wrap{
     width: 82%;
@@ -198,12 +202,12 @@ body{
     max-width: 1000px;
 }
 .links img{
-    width: 200px
+    width: 250px
 }
 .links a{
     text-decoration: none;
     color: #444;
-    width: 25%;
+    width: 33%;
     margin-bottom: 40px;
     box-sizing: border-box;
     padding: 15px;
