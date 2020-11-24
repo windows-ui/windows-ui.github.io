@@ -257,6 +257,7 @@ body{
     }
     .app-logo-text-header{
         font-size: 32px;
+        width: 180px;
     }
     .app-logo-sub-header{
         font-size: 33px;
