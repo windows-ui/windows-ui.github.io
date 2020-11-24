@@ -1,7 +1,10 @@
 body{
-   font-family: sans-serif;  
+   font-family:sans-serif;  
 }
-
+.parent-container{
+    display:flex;
+    justify-content:space-around;
+}
 .win-header-button-icon,
 .win-sub-header-content,
 .win-demo-laptop-screen,
@@ -17,29 +20,31 @@ body{
 .win-header-button-icon,
 .win-header-text-below i,
 .win-demo-laptop-logo{
-    background-repeat: no-repeat;
-    background-size: cover;
+    background-repeat:no-repeat;
+    background-size:cover;
 }
 
 .app-logo{
     width:162px;
+    height:162px;
+    background:#333333;
     box-shadow: 0 15px 32px #777;
-    border-radius: 50%;
+    border-radius:50%;
 }
 .app-logo-text-container{
     margin-left: 32px;
     align-self: center;
 }
 .app-logo-text-header{
-    font-size: 61px;
-    line-height: 1;
-    margin: 0;
-    margin-top: -25px;
+    font-size:61px;
+    line-height:1;
+    margin:0;
+    margin-top:-25px;
     width: 360px;
-    font-weight: 500;
+    font-weight:500;
 }
 .app-logo-sub-header{
-    font-size: 62px;
+    font-size:62px;
     
 }
 .win-header-container{
@@ -49,45 +54,45 @@ body{
 }
 .win-header-text{
     font-weight: bold;
-    font-size: 40px;
+    font-size:40px;
     margin-top:55px;
 }
 .win-header-button{
-    background: #0BA4E0;
-    color: #fff;
-    box-sizing: border-box;
-    height: 60px;
-    font-size: 24px;
-    text-decoration: none;
-    border-radius: 0;
-    transition: .2s;
-    font-weight: 700;
+    background:#0BA4E0;
+    color:#fff;
+    box-sizing:border-box;
+    height:60px;
+    font-size:24px;
+    text-decoration:none;
+    border-radius:0;
+    transition:.2s;
+    font-weight:700;
     padding: 0 30px;
     cursor:pointer;
     box-shadow: 0 10px 20px rgba(11,164,224,.3);
-    max-width: 340px;
+    max-width:340px;
     border: none;
     margin-top:32px;
-    -webkit-font-smoothing: antialiased;
+    -webkit-font-smoothing:antialiased;
 }
 .win-header-button:hover{
     box-shadow: 0 10px 20px rgba(11,164,224,.7)
 }
 .win-header-button:focus{
-    outline: none
+    outline:none
 }
 .win-header-button:active{
     box-shadow: 0 10px 20px rgba(11,164,224,1)
 }
 .win-header-button-icon{
-    width: 58px;
-    right: 20px;
-    padding-right: 32px;
+    width:58px;
+    right:20px;
+    padding-right:32px;
     background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8' standalone='no'%3F%3E%3Csvg xmlns:dc='http://purl.org/dc/elements/1.1/' xmlns:cc='http://creativecommons.org/ns%23' xmlns:rdf='http://www.w3.org/1999/02/22-rdf-syntax-ns%23' xmlns:svg='http://www.w3.org/2000/svg' xmlns='http://www.w3.org/2000/svg' xmlns:sodipodi='http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd' xmlns:inkscape='http://www.inkscape.org/namespaces/inkscape' id='Layer_1' style='enable-background:new 0 0 30 30;' version='1.1' viewBox='0 0 30 30' xml:space='preserve' sodipodi:docname='rocket.svg' inkscape:version='0.92.2 (5c3e80d, 2017-08-06)'%3E%3Cmetadata id='metadata17'%3E%3Crdf:RDF%3E%3Ccc:Work rdf:about=''%3E%3Cdc:format%3Eimage/svg+xml%3C/dc:format%3E%3Cdc:type rdf:resource='http://purl.org/dc/dcmitype/StillImage' /%3E%3C/cc:Work%3E%3C/rdf:RDF%3E%3C/metadata%3E%3Cdefs id='defs15' /%3E%3Csodipodi:namedview pagecolor='%23ffffff' bordercolor='%23666666' borderopacity='1' objecttolerance='10' gridtolerance='10' guidetolerance='10' inkscape:pageopacity='0' inkscape:pageshadow='2' inkscape:window-width='1366' inkscape:window-height='705' id='namedview13' showgrid='false' inkscape:zoom='7.8666667' inkscape:cx='15' inkscape:cy='15' inkscape:window-x='-4' inkscape:window-y='-4' inkscape:window-maximized='1' inkscape:current-layer='Layer_1' /%3E%3Cpolygon points='11,22 8,19 8,14 16,22 ' id='polygon2' style='fill:%23ffffff;fill-opacity:1' /%3E%3Cpath d='M26.979,3.021C26.979,3.021,18,3,11,10c-2.99,2.99-3,8-1,10s7.01,1.99,10-1C27,12,26.979,3.021,26.979,3.021z M17,11 c0-1.105,0.895-2,2-2c1.105,0,2,0.895,2,2s-0.895,2-2,2C17.895,13,17,12.105,17,11z' id='path4' style='fill:%23ffffff;fill-opacity:1' /%3E%3Cpath d='M18.811,18.676c0,0,0.757,3.784-0.757,5.297C15.784,26.243,12,27,12,27l1-7L18.811,18.676z' id='path6' style='fill:%23ffffff;fill-opacity:1' /%3E%3Cpath d='M11.324,11.189c0,0-3.784-0.757-5.297,0.757C3.757,14.216,3,18,3,18l7-1L11.324,11.189z' id='path8' style='fill:%23ffffff;fill-opacity:1' /%3E%3Cpath d='M9.542,22.34c-0.045,0.064-0.072,0.138-0.13,0.195c-0.975,0.975-2.438,0.488-2.438,0.488s-0.488-1.463,0.488-2.438 c0.058-0.058,0.131-0.084,0.195-0.13L7.2,19.997c-0.38,0.1-0.741,0.29-1.038,0.587c-1.366,1.366-1.149,4.4-1.149,4.4 s3.016,0.235,4.4-1.149C9.71,23.538,9.9,23.177,10,22.797L9.542,22.34z' id='path10' style='fill:%23ffffff;fill-opacity:1' /%3E%3C/svg%3E");
 }
 .win-header-text-below{
-    text-decoration: none;
-    font-size: 18px;
+    text-decoration:none;
+    font-size:18px;
 }
 .win-header-text-below b{
     color:#555
@@ -98,25 +103,25 @@ body{
     
 }
 .win-header-promo-container{
-    width: 440px;
-    height: 440px;
-    margin-top: 32px;
+    width:440px;
+    height:440px;
+    margin-top:32px;
 }
 .win-header-promo-img-backdrop{
-    position: absolute;
-    width: 440px;
-    filter: blur(15px);
-    opacity: 0.7;
-    margin-top: 18px;
+    position:absolute;
+    width:440px;
+    filter:blur(15px);
+    opacity:0.7;
+    margin-top:18px;
 }
 .win-header-promo-img{
-    position: absolute;
-    width: 410px;
-    margin-left: 15px;
+    position:absolute;
+    width:410px;
+    margin-left:15px;
 }
 .win-header-text-demo-container{
-    background: #0BA4E0;
-    margin-top: 32px;
+    background:#0BA4E0;
+    margin-top:32px;
     color: #fff;
     font-size: 32px;
     display: flex;
@@ -237,4 +242,80 @@ body{
 }
 .footer a{
     text-decoration: none;
+}
+
+
+@media only screen and (max-width: 760px) {
+    .parent-container,
+    .win-demo-laptop-logo,
+    .links{
+        display: block
+    } 
+    .app-logo{
+        width: 100px;
+        height: 100px;
+    }
+    .app-logo-text-header{
+        font-size: 32px;
+    }
+    .app-logo-sub-header{
+        font-size: 33px;
+    }
+    .win-header-text{
+        font-size: 34px;
+    }
+    .win-header-promo-container{
+        display: none;
+    }
+    .win-header-text-demo-container{
+        display: inline-block;
+        width: 100%;
+        padding: 0 20% 35px 8%;
+        font-size: 20px;
+    }
+    .win-header-button{
+        width: 240px;
+        font-size: 19px;
+    }
+    .win-header-button-icon{
+        font-size: 25px;
+    }
+    .win-header-text-below{
+        font-size: 14px;
+    }
+    .win-header-text-below i{
+        font-size: 18px;
+    }
+    .win-demo-laptop{    
+        width: 100%;
+        margin: -25px 0 0 0;
+    }
+    .win-demo-laptop-screen{
+        width: 90%;
+        right: 0;
+        -webkit-transform: none;
+        top: 25px;
+        height: 400px;
+    }
+    
+    .win-demo-laptop-logo{
+        color: #999;
+        left: 46%; 
+        margin-left: 0;
+    } 
+
+    .win-sub-header-container{   
+        margin: 20px 0 0 0;
+        display: inline-block;
+        width: 100%;
+        padding: 45px 0 0 0;
+    }
+    .win-sub-header-content{
+        left: 0;
+        padding-left: 25px;
+        padding-right: 25px;
+    }
+    .footer{
+        padding: 2px 25px 25px 25px
+    }
 }
