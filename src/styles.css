@@ -274,28 +274,28 @@ body{
         font-size: 20px;
     }
     .win-header-button{
-        width: 240px;
-        font-size: 19px;
+        width:240px;
+        font-size:19px;
     }
     .win-header-button-icon{
-        font-size: 25px;
+        font-size:25px;
     }
     .win-header-text-below{
-        font-size: 14px;
+        font-size:14px;
     }
     .win-header-text-below i{
-        font-size: 18px;
+        font-size:18px;
     }
     .win-demo-laptop{    
-        width: 100%;
+        width:100%;
         margin: -25px 0 0 0;
     }
     .win-demo-laptop-screen{
-        width: 90%;
-        right: 0;
-        -webkit-transform: none;
-        top: 25px;
-        height: 400px;
+        width:95%;
+        right:0;
+        -webkit-transform:none;
+        top:25px;
+        height:400px;
     }
     
     .win-demo-laptop-logo{
