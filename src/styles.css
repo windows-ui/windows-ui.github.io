@@ -270,7 +270,7 @@ body{
     .win-header-text-demo-container{
         display: inline-block;
         width: 100%;
-        padding: 0 20% 35px 8%;
+        padding: 0 0 35px 0;
         font-size: 20px;
     }
     .win-header-button{
