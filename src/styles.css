@@ -119,6 +119,9 @@ body{
     width:410px;
     margin-left:15px;
 }
+.win-header-text-demo-container h2{
+       margin: 28px 0 0 0; 
+    }
 .win-header-text-demo-container{
     background:#0BA4E0;
     margin-top:32px;
@@ -257,13 +260,17 @@ body{
     }
     .app-logo-text-header{
         font-size: 32px;
-        width:10px;
+        width:fit-content;
+    }
+    .app-logo-text-container{
+        width:100%
     }
     .app-logo-sub-header{
         font-size: 33px;
     }
     .win-header-text{
         font-size: 34px;
+        margin-top: 40px;
     }
     .win-header-promo-container{
         display: none;
@@ -311,6 +318,9 @@ body{
         width: 100%;
         padding: 45px 0 0 0;
     }
+    .win-header-text-demo-container h2{
+       margin: 28px 0px 0px 25px; 
+    }
     .win-sub-header-content{
         left: 0;
         padding-left: 25px;
@@ -318,5 +328,10 @@ body{
     }
     .footer{
         padding: 2px 25px 25px 25px
+    }
+    .win-header-text,
+    .win-sub-header-content,
+    .win-header-button{
+        user-select:none
     }
 }
