@@ -239,7 +239,7 @@ body{
 h2.win-header-center.terminal- i{
     filter: invert(1);
     font-size: 35px;
-    margin-left: 35px;
+    margin-left:32px;
     padding-left: 10px;
     padding-top: 5px;
 }
@@ -271,6 +271,7 @@ h2.win-header-center.terminal- i{
     box-shadow: 0 10px 20px rgba(0,0,0,.28);
     margin: 15px;
     border-radius: 12px;
+    display: inline-block
 }
 .terminal span{
     user-select: none;
