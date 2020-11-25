@@ -236,6 +236,46 @@ body{
     font-weight: 500;
     text-align: center;
 }
+h2.win-header-center.terminal- i{
+    filter: invert(1);
+    font-size: 35px;
+    margin-left: 35px;
+    padding-left: 10px;
+    padding-top: 5px;
+}
+
+.terminal red,
+.terminal yellow,
+.terminal green{
+    background: #eee;
+    height: 18px;
+    width: 18px;
+    display: inline-block;
+    border-radius: 50px;
+    margin-right:8px;
+}
+.terminal red{
+    background: #fb4948
+}
+.terminal yellow{
+   background: #fdb225 
+}
+.terminal green{
+    background: #2ac833
+}
+.terminal{
+    font-size: 20px;
+    padding: 20px 15px 20px 15px;
+    background: #111;
+    color: #fff;
+    box-shadow: 0 10px 20px rgba(0,0,0,.28);
+    margin: 15px;
+    border-radius: 12px;
+}
+.terminal span{
+    user-select: none;
+    opacity: .5;
+}
     
 .footer{
     border-top: 10px solid #0BA4E0;
@@ -282,8 +322,14 @@ body{
         font-size: 20px;
     }
     .win-header-button{
-        width:240px;
-        font-size:19px;
+        width: 215px;
+        font-size: 16px;
+        height: 45px;
+        line-height: 0;
+    }
+    .win-header-button span{
+        top: -2px;
+        position: relative;
     }
     .win-header-button-icon{
         font-size:25px;
@@ -297,19 +343,21 @@ body{
     .win-demo-laptop{    
         width:100%;
         margin: -25px 0 0 0;
+        height: 600px;
     }
     .win-demo-laptop-screen{
         width:95%;
         right:0;
         -webkit-transform:none;
         top:25px;
-        height:400px;
+        height:500px;
     }
     
     .win-demo-laptop-logo{
         color: #999;
         left: 46%; 
         margin-left: 0;
+        top: 545px;
     } 
 
     .win-sub-header-container{   
