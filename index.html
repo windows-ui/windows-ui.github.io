@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1"> 
     <title>Windows10 framework</title>
     <link rel="shortcut icon" href="src/img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="src/styles.css" />
+    <link rel="stylesheet" type="text/css" href="src/styles.min.css" />
 </head>    
 	
 <body style="margin:0">
@@ -147,7 +147,7 @@
 
     function elmYPosition(eID) {
         var elm = document.getElementById(eID);
-        var y = elm.offsetTop-15; // -15 for 15px padding
+        var y = elm.offsetTop-18; // -18 for 18px padding
         var node = elm;
         while (node.offsetParent && node.offsetParent != document.body) {
             node = node.offsetParent;
