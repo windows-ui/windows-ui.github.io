@@ -27,16 +27,16 @@
             
          <div style="display:grid;justify-content:center;">
             <span class="win-header-text">Build full featured Windows<br>Native look & feel apps</span>
-             <button class="win-header-button">
+             <button class="win-header-button" onclick="smoothScroll('getting-started');">
                  <i class="win-header-button-icon"></i>
                  <span>Getting Started</span>
              </button>
              <br>
              <div style="padding-right:80px;">
-                <a href="#docs" class="win-header-text-below">Docs •</a> &nbsp;
-                <a href="#" target="_blank" class="win-header-text-below">Templates •</a> &nbsp;
+                <a href="#docs" class="win-header-text-below">Docs •</a>
+                <a href="#" target="_blank" class="win-header-text-below">Templates •</a>
                 <a href="https://github.com/virtualvivek/Windows10-framework/" target="_blank" class="win-header-text-below">
-                <i></i>&nbsp;Repository</a> &nbsp;
+                <i></i>&nbsp;Repository •</a>
                 <a href="https://github.com/virtualvivek/Windows10-framework/releases" target="_blank" class="win-header-text-below">Released <b>v1.2</b></a>      
              </div>
          </div>
@@ -60,15 +60,16 @@
         <div class="win-sub-header-container">
             <h2 class="win-sub-header-content">
             <a href="https://windows10framework.netlify.app/"><img src="src/img/img_button_demo.png" class="win-sub-header-demo-button"/></a><br><br>
-        Windows10-framework - is a free and open source framework to develop desktop or web apps with native look and feel. It is also an indispensable prototyping tool to show working app prototype as soon as possible in case you need to.</h2>
+        Windows10-framework - is a free and open source framework to develop desktop or web apps with native look and feel. It is also an indispensable prototyping tool to show working app prototype as soon as possible in case you need to.
+            </h2>
    
         </div>
     
-        <h2 class="win-header-center terminal-">Let’s Get Started <i class="win-header-button-icon"></i></h2>
+        <h2 class="win-header-center terminal-" id="getting-started">Let’s Get Started <i class="win-header-button-icon"></i></h2>
     
         <div class="terminal">
             <red></red><yellow></yellow><green></green><br><br>
-            <span>$</span> git clone https://github.com/virtualvivek/Windows10-framework.git
+            <span>$</span> <p>git clone https://github.com/virtualvivek/Windows10-framework.git</p>
         </div>
     
     
@@ -130,6 +131,56 @@
         </div>
  
 </body>
+    <script>
 
+        function currentYPosition() {
+        // Firefox, Chrome, Opera, Safari
+        if (self.pageYOffset) return self.pageYOffset;
+        // Internet Explorer 6 - standards mode
+        if (document.documentElement && document.documentElement.scrollTop)
+            return document.documentElement.scrollTop;
+        // Internet Explorer 6, 7 and 8
+        if (document.body.scrollTop) return document.body.scrollTop;
+        return 0;
+    }
+
+
+    function elmYPosition(eID) {
+        var elm = document.getElementById(eID);
+        var y = elm.offsetTop;
+        var node = elm;
+        while (node.offsetParent && node.offsetParent != document.body) {
+            node = node.offsetParent;
+            y += node.offsetTop;
+        } return y;
+    }
+
+
+    function smoothScroll(eID) {
+        var startY = currentYPosition();
+        var stopY = elmYPosition(eID);
+        var distance = stopY > startY ? stopY - startY : startY - stopY;
+        if (distance < 100) {
+            scrollTo(0, stopY); return;
+        }
+        var speed = Math.round(distance / 100);
+        if (speed >= 20) speed = 20;
+        var step = Math.round(distance / 25);
+        var leapY = stopY > startY ? startY + step : startY - step;
+        var timer = 0;
+        if (stopY > startY) {
+            for ( var i=startY; i<stopY; i+=step ) {
+                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
+            } return;
+        }
+        for ( var i=startY; i>stopY; i-=step ) {
+            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
+            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
+        }
+    }
+
+
+    </script>
   
 </html>
