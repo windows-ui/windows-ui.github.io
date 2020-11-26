@@ -348,6 +348,7 @@ h2.win-header-center.terminal- i{
     }
     .win-header-text-below i{
         padding-right:18px;
+        padding-top:2px;
     }
     .win-demo-laptop{    
         width:100%;
