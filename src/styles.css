@@ -346,7 +346,7 @@ h2.win-header-center.terminal- i{
         font-size:14px;
     }
     .win-header-text-below i{
-        padding-right:16px;
+        padding-right:18px;
     }
     .win-demo-laptop{    
         width:100%;
@@ -387,7 +387,8 @@ h2.win-header-center.terminal- i{
     }
     .win-header-text,
     .win-sub-header-content,
-    .win-header-button{
+    .win-header-button,
+    .win-header-center{
         user-select:none
     }
 }
