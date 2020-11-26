@@ -347,8 +347,8 @@ h2.win-header-center.terminal- i{
         font-size:14px;
     }
     .win-header-text-below i{
-        padding-right:18px;
-        padding-top:2px;
+        margin-right: 5px;
+    font-size: 18px;
     }
     .win-demo-laptop{    
         width:100%;
