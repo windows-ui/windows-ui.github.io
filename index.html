@@ -1,178 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
+    <title>windows-ui-web</title>
     <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, initial-scale=1"> 
-    <title>Windows10 framework</title>
-    <link rel="shortcut icon" href="src/img/favicon.ico">
-    <link rel="stylesheet" type="text/css" href="src/styles.css" />
-    <script data-ad-client="ca-pub-5346194089574769" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-</head>    
-<body style="margin:0">
-    
-    <div class="parent-container">
-        
-        <div class="win-header-container">
-            
-            <div style="display:flex;">
-                <img class="app-logo" src="src/img/iconLogo.svg"/>
-                <div class="app-logo-text-container">
-                    <h2 class="app-logo-text-header">Windows 10</h2>
-                    <span class="app-logo-sub-header">framework</span>
-                </div>
-            </div>
-                     
-            
-         <div style="display:grid;justify-content:center;">
-            <span class="win-header-text">Build full featured Windows<br>Native look & feel apps</span>
-             <button class="win-header-button" onclick="smoothScroll('getting-started');">
-                 <i class="win-header-button-icon"></i>
-                 <span>Getting Started</span>
-             </button>
-             <br>
-             <div style="padding-right:80px;">
-                <a href="#docs" class="win-header-text-below">Docs •</a>
-                <a href="#" target="_blank" class="win-header-text-below">Templates •</a>
-                <a href="https://github.com/virtualvivek/Windows10-framework/" target="_blank" class="win-header-text-below">
-                <i></i>Repository •</a>
-                <a href="https://github.com/virtualvivek/Windows10-framework/releases" target="_blank" class="win-header-text-below">Released <b>v2.0</b></a>      
-             </div>
-         </div>
+    <meta name="theme-color" content="#EEE" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link rel="manifest" href="manifest.json">
+    <link rel="shortcut icon" href="./docs/public/favicon.ico" />
+    <link rel="stylesheet" href="dist/icons/fonts/fonts.min.css" />
+    <link rel="stylesheet" type="text/css" href="./docs/css/neumorph.css"/>
+    <link rel="stylesheet" type="text/css" href="dist/config/app-config.css" />
+    <link rel="stylesheet" type="text/css" href="dist/windows-ui-web.min.css" />  
+  </head>
+  <body>
+    <div id="app-navbar-wrap-id" class="app-navbar-wrap">
+      <div class="app-navbar-topbar-mobile">
+        <span class="app-navbar-toggle-button"></span>
+        <div style="display: flex; justify-content: space-between; width: calc(100% - 60px);">
+          <span class="app-navbar-name">React-windows-ui</span>
+          <span class="app-navbar-name">Home</span>
         </div>
-        
-        <div class="win-header-promo-container">
-         <img src="src/img/img_app_promo.png" class="win-header-promo-img-backdrop"/>
-        <img src="src/img/img_app_promo.png" class="win-header-promo-img"/></div>     
-       
+      </div>
+      <nav class="animate">
+        <div class="app-navbar-header">
+          <span class="app-navbar-toggle-button"></span>
+          <span class="app-navbar-name">React Windows UI</span>
+        </div>
+        <ul class="app-navbar-list" id="app-navbar-list">
+          <label class="app-navbar-theme-switch">
+            <input type="checkbox" id="app-navbar-theme-switch" checked>
+            <div class="app-navbar-theme-switch-view"></div>
+            <span id="app-navbar-theme-switch-text">Day Mode</span>
+          </label>
+        </ul>
+      </nav>
+      <div class="app-navbar-overlay"></div>
     </div>
-    
-        <div class='win-header-text-demo-container'>
-            <h2>Demo</h2>
-        </div>
-    
-        <div class="win-demo-laptop">
-            <iframe src="https://windows10framework.netlify.app/" class="win-demo-laptop-screen"></iframe>
-            <i class="win-demo-laptop-logo"></i>  
-        </div>
-    
-        <div class="win-sub-header-container">
-            <h2 class="win-sub-header-content">
-            <a href="https://windows10framework.netlify.app/"><img src="src/img/img_button_demo.png" class="win-sub-header-demo-button"/></a><br><br>
-        Windows10-framework - is a free and open source framework to develop desktop or web apps with native look and feel. It is also an indispensable prototyping tool to show working app prototype as soon as possible in case you need to.
-            </h2>
-   
-        </div>
-    
-        <h2 class="win-header-center terminal-" id="getting-started">Let’s Get Started <i class="win-header-button-icon"></i></h2>
-    
-        <div class="terminal">
-            <red></red><yellow></yellow><green></green><br><br>
-            <span>$</span> <p>git clone https://github.com/virtualvivek/Windows10-framework.git</p>
-        </div>
-    
-    
-        <h2 class="win-header-center">Stunning Icons</h2>
-        <div class="win-img-framework-icons-wrap">
-            <img src="src/img/img_app_framework_icons.jpg" class="win-img-framework-icons"/>
-        </div>
-    
-<!--
-        <h2 class="win-header-center">Light/Dark Easy Switch</h2>
-        <div class="win-img-framework-icons-wrap">
-            <img src="src/img/app_img_daynight.png" class="win-img-framework-icons"/>
-        </div>
--->
-		
-   
-    
-        <h2 class="win-header-center" id="docs">Components</h2>
-        <div class="links">
-            <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/src/core/_docs/forms/README.md">
-                <img src="src/img/docs/docs_form.png"/>
-                <div class="link-title">Form Elements</div>
-            </a>
-            <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/src/core/_docs/progressControls/README.md">
-                <img src="src/img/docs/docs_progress_controls.png"/>
-                <div class="link-title">Progress Controls</div>
-            </a>
-            <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/src/core/_docs/icons/README.md">
-                <img src="src/img/docs/docs_icons.png"/>
-                <div class="link-title">Icon Sets</div>
-            </a>
-            <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/src/core/_docs/bottomSheet/README.md">
-                <img src="src/img/docs/docs_bottomsheet.png"/>
-                <div class="link-title">Bottom Sheet</div>
-            </a>
-            <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/src/core/_docs/alerts/README.md">
-                <img src="src/img/docs/docs_alerts.png"/>
-                <div class="link-title">Alerts</div>
-            </a>
-            <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/src/core/_docs/notifications/README.md">
-                <img src="src/img/docs/docs_notifications.png"/>
-                <div class="link-title">Notification</div>
-            </a>
-           
-        </div>
 
-      
-        <div>
-            <div class="footer">
-                <p>Code licensed under <a href="https://github.com/virtualvivek/Windows10-framework/blob/master/LICENSE" target="_blank">MIT</a></p>
-                <p>2020 © Windows10-framework is brought to you by <a href="https://github.com/virtualvivek/" target="_blank">Vivek Verma</a>.</p>
-            </div>
-        </div>
- 
-</body>
-    <script>
+    <div class="app-section-container has-padding transition-left" id="app-section-container-id">
+      <h1><b>windows-ui-web</b></h1>
+      <p>
+        Build <span class="color-primary">Windows Fluent UI </span>apps using html, css & javascript.<br>
+      </p>
+      <button class="app-btn animate btn-primary" type="button">
+        <span>Getting Started</span>
+      </button>
+      &nbsp;
+      <button class="app-btn animate btn-primary-outline" type="button">
+        <span>Boilerplate</span>
+      </button>
 
-        function currentYPosition() {
-        // Firefox, Chrome, Opera, Safari
-        if (self.pageYOffset) return self.pageYOffset;
-        // Internet Explorer 6 - standards mode
-        if (document.documentElement && document.documentElement.scrollTop)
-            return document.documentElement.scrollTop;
-        // Internet Explorer 6, 7 and 8
-        if (document.body.scrollTop) return document.body.scrollTop;
-        return 0;
-    }
-
-
-    function elmYPosition(eID) {
-        var elm = document.getElementById(eID);
-        var y = elm.offsetTop-18; // -18 for 18px padding
-        var node = elm;
-        while (node.offsetParent && node.offsetParent != document.body) {
-            node = node.offsetParent;
-            y += node.offsetTop;
-        } return y;
-    }
-
-
-    function smoothScroll(eID) {
-        var startY = currentYPosition();
-        var stopY = elmYPosition(eID);
-        var distance = stopY > startY ? stopY - startY : startY - stopY;
-        if (distance < 100) {
-            scrollTo(0, stopY); return;
-        }
-        var speed = Math.round(distance / 100);
-        if (speed >= 20) speed = 20;
-        var step = Math.round(distance / 25);
-        var leapY = stopY > startY ? startY + step : startY - step;
-        var timer = 0;
-        if (stopY > startY) {
-            for ( var i=startY; i<stopY; i+=step ) {
-                setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-                leapY += step; if (leapY > stopY) leapY = stopY; timer++;
-            } return;
-        }
-        for ( var i=startY; i>stopY; i-=step ) {
-            setTimeout("window.scrollTo(0, "+leapY+")", timer * speed);
-            leapY -= step; if (leapY < stopY) leapY = stopY; timer++;
-        }
-    }
-
-    </script>
-  
+      <div class="container neumorphism">
+        <span class="circle small neumorphism">
+        </span>
+        <span class="circle neumorphism"></span>
+      </div>
+    </div>
+  </body>
+  <script src="./docs/_navbar.js"></script>
+  <script>init_navbar_ul("Home","root");</script>
+  <script src="src/js/windows-ui-web.js"></script>
+  <script></script>
 </html>
