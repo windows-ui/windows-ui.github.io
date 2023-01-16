@@ -78,59 +78,74 @@
     </nav>
   </div>
   <div class="app-section-container has-padding">
-    <h1>Alert</h1>
-    <p>
-      <span class="app-color-primary">Alert</span> component is used to interrupt the user with a mandatory confirmation or action.
+    <h1>Select</h1>
+    <p>A
+      <span class="app-color-primary">Select</span> component is used to create a drop-down list to choose one value from multiple..
     </p>
-    <button class="app-btn" type="button" data-win-toggle="modal" data-win-target="#MyModal">
-      <span>Open Alert Default</span>
-    </button>
-    <div class="app-alert" id="MyModal" data-win-toggle="modal" data-win-target="#MyModal" aria-labelledby="exampleModalLabel" tabindex="-1">
-      <div class="app-alert-modal" aria-modal="true" role="dialog">
-        <div class="app-alert-header">
-          <h1>Alert</h1>
-          <div class="app-alert-message">This is alert Box.</div>
-        </div>
-        <div class="app-alert-footer">
-          <button class="app-btn app-btn-primary" type="button" data-win-toggle="modal" data-win-target="#MyModal">
-            <span>OK to Close</span>
-          </button>
-        </div>
-      </div>
+    <div class="app-select-menu">
+      <select name="Some Name">
+        <option value="red">red</option>
+        <option value="blue">blue</option>
+        <option value="green">green</option>
+        <option value="pink">pink</option>
+      </select>
     </div>
     <h2>Usage</h2>
     <pre><code id="code_view_1"></code></pre>
-    <h2>Open Alert</h2>
+    <h2>Select Dropdown</h2>
+    <div class="app-dropdown-menu app-select-text">
+      <span class="app-dropdown-title" data-win-toggle="dropdown" data-win-target="#MySelectMenu">pink</span>
+      <ul class="app-dropdown-list" id="MySelectMenu">
+        <li class="app-dropdown-list-item">
+          <span>blue</span>
+        </li>
+        <li class="app-dropdown-list-item">
+          <span>red</span>
+        </li>
+        <li class="app-dropdown-list-item">
+          <span>orange</span>
+        </li>
+        <li class="app-dropdown-list-item selected">
+          <span>pink</span>
+        </li>
+        <li class="app-dropdown-list-item">
+          <span>green</span>
+        </li>
+      </ul>
+    </div>
     <pre><code id="code_view_2"></code></pre>
+    <br />
+    <br />
   </div>
 </body>
 <script src="../dist/windows-ui.min.js"></script>
 <script src="./js/navbarItems.js"></script>
-<script>init_navbar_ul("Alerts", "subdir")</script>
+<script>init_navbar_ul("Select", "subdir")</script>
 <script src="./js/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script>document.getElementById("code_view_1").innerHTML =
 hljs.highlightAuto(`
-<div class="app-alert" id="MyModal" data-win-toggle="modal" data-win-target="#MyModal" tabindex="-1">
-  <div class="app-alert-modal" aria-modal="true" role="dialog">
-    <div class="app-alert-header">
-      <h1>Alert</h1>
-      <div class="app-alert-message">This is alert Box.</div>
-    </div>
-    <div class="app-alert-footer">
-      <button class="app-btn app-btn-primary" type="button"
-        data-win-toggle="modal" data-win-target="#MyModal">
-        <span>OK to Close</span>
-      </button>
-    </div>
-  </div>
+<div class="app-select-menu">
+  <select name="Some Name">
+    <option value="red">red</option>
+    <option value="blue">blue</option>
+    <option value="green">green</option>
+    <option value="pink">pink</option>
+  </select>
 </div>
 `).value;
 document.getElementById("code_view_2").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn" type="button" data-win-toggle="modal" data-win-target="#MyModal">
-  <span>Open Alert Default</span>
-</button>
+<div class="app-dropdown-menu app-select-text">
+  <span class="app-dropdown-title" data-win-toggle="dropdown" data-win-target="#MySelectMenu">pink</span>
+  <ul class="app-dropdown-list" id="MySelectMenu">
+    <li class="app-dropdown-list-item"><span>blue</span></li>
+    <li class="app-dropdown-list-item"><span>red</span></li>
+    <li class="app-dropdown-list-item"><span>orange</span></li>
+    <li class="app-dropdown-list-item selected"><span>pink</span></li>
+    <li class="app-dropdown-list-item"><span>green</span></li>
+  </ul>
+</div>
 `).value;</script>
 
 </html>

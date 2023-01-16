@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+  include common/head.pug
+  <body>
+    include common/navbar.pug
+
+    <div class="app-section-container has-padding">
+      <h1>CommandBar</h1>
+      <p><span class="app-color-primary">CommandBar</span> is a surface that houses commands that operate on the content of the window.<br></p>
+
+      <div class="app-cmd-bar">
+        <button class="app-cmdbar-button">
+          <i class="icons10-plus app-color-primary"></i>
+          <span>New</span>
+        </button>
+        <!-- Adding <hr/> tag to make a split UI -->
+        <hr/>
+        <div class="app-cmdbar-menu">
+          <div class="app-cmdbar-menu-trigger" data-win-toggle="dropdown" data-win-target="#MyMenu">
+            <button class="app-cmdbar-button">
+              <i class="icons10-angle-down"></i>
+            </button>
+          </div>
+          <ul class="app-cmdbar-menu-list left-justify" id="MyMenu">
+            <li class="cmdbar-menu-list-item"><a href="#"><i class="icons10-file"></i>File</a></li>
+            <li class="cmdbar-menu-list-item"><a href="#">Folder</a></li>
+            <li class="cmdbar-menu-list-item"><a href="#">Document</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <h2>Usage</h2>
+      <pre><code id="code_view_1"></code></pre>
+
+      //- <!-- ------------------------------------------------------- -->
+
+      <h2>CommandBar as <p class="app-code">Nested Menu</p> :</h2>
+
+      <div class="app-cmdbar-menu">
+        <div class="app-cmdbar-menu-trigger" data-win-toggle="dropdown" data-win-target="#MyMenu2">
+          <button class="app-cmdbar-button">
+            <i class="icons10-angle-down color-primary"></i>
+            <span>Share</span>
+          </button>
+        </div>
+        <ul class="app-cmdbar-menu-list" id="MyMenu2">
+          <li class="cmdbar-menu-list-item">
+            <a href="javascript:;" data-win-toggle="dropdown" data-win-target="#MyMenu4">Whatsapp<i class="icons10-angle-right"></i></a>
+              <ul class="app-cmdbar-menu-list cmdbar-submenu" id="MyMenu4">
+                <li class="cmdbar-menu-list-item"><a href="#">HyperLink</a></li>
+              </ul>
+          </li>
+          <li class="cmdbar-menu-list-item"><a href="#">Facebook</a></li>
+        </ul>
+      </div>
+
+      <pre><code id="code_view_2"></code></pre>
+
+      //- <!-- ------------------------------------------------------- -->
+      <br/><br/>
+    </div>
+  </body>
+  include common/footer.pug
+  +importing('CommandBar')
+  script.
+    document.getElementById("code_view_1").innerHTML =
+    hljs.highlightAuto(`
+    <div class="app-cmd-bar">
+      <button class="app-cmdbar-button">
+        <i class="icons10-plus app-color-primary"></i>
+        <span>New</span>
+      </button>
+      <!-- Adding <hr/> tag to make a split UI -->
+      <hr/>
+      <div class="app-cmdbar-menu">
+        <div class="app-cmdbar-menu-trigger" data-win-toggle="dropdown" data-win-target="#MyMenu">
+          <button class="app-cmdbar-button">
+            <i class="icons10-angle-down"></i>
+          </button>
+        </div>
+        <ul class="app-cmdbar-menu-list left-justify" id="MyMenu">
+          <li class="cmdbar-menu-list-item"><a href="#"><i class="icons10-file"></i>File</a></li>
+          <li class="cmdbar-menu-list-item"><a href="#">Folder</a></li>
+          <li class="cmdbar-menu-list-item"><a href="#">Document</a></li>
+        </ul>
+      </div>
+    </div>
+    `).value;
+    document.getElementById("code_view_2").innerHTML =
+    hljs.highlightAuto(`
+    <div class="app-cmdbar-menu">
+      <div class="app-cmdbar-menu-trigger" data-win-toggle="dropdown" data-win-target="#MyMenu2">
+        <button class="app-cmdbar-button">
+          <i class="icons10-angle-down color-primary"></i>
+          <span>Share</span>
+        </button>
+      </div>
+      <ul class="app-cmdbar-menu-list" id="MyMenu2">
+        <li class="cmdbar-menu-list-item">
+          <a href="javascript:;" data-win-toggle="dropdown" data-win-target="#MyMenu4">Whatsapp<i class="icons10-angle-right"></i></a>
+            <ul class="app-cmdbar-menu-list cmdbar-submenu" id="MyMenu4">
+              <li class="cmdbar-menu-list-item"><a href="#">HyperLink</a></li>
+            </ul>
+        </li>
+        <li class="cmdbar-menu-list-item"><a href="#">Facebook</a></li>
+      </ul>
+    </div>
+    `).value;
+</html>

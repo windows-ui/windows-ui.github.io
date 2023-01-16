@@ -78,59 +78,57 @@
     </nav>
   </div>
   <div class="app-section-container has-padding">
-    <h1>Alert</h1>
-    <p>
-      <span class="app-color-primary">Alert</span> component is used to interrupt the user with a mandatory confirmation or action.
+    <h1>Appearance</h1>
+    <p>The <span class="app-color-primary">Appearance</span> module exposes information about the user's appearance preferences,
+      <br> such as their preferred color scheme (light or dark).
     </p>
-    <button class="app-btn" type="button" data-win-toggle="modal" data-win-target="#MyModal">
-      <span>Open Alert Default</span>
-    </button>
-    <div class="app-alert" id="MyModal" data-win-toggle="modal" data-win-target="#MyModal" aria-labelledby="exampleModalLabel" tabindex="-1">
-      <div class="app-alert-modal" aria-modal="true" role="dialog">
-        <div class="app-alert-header">
-          <h1>Alert</h1>
-          <div class="app-alert-message">This is alert Box.</div>
-        </div>
-        <div class="app-alert-footer">
-          <button class="app-btn app-btn-primary" type="button" data-win-toggle="modal" data-win-target="#MyModal">
-            <span>OK to Close</span>
-          </button>
-        </div>
-      </div>
-    </div>
     <h2>Usage</h2>
     <pre><code id="code_view_1"></code></pre>
-    <h2>Open Alert</h2>
+    <div class="app-hr"></div>
+    <h2>
+      <b>Methods</b>
+    </h2>
+    <h2>
+      <p class="app-code">getColorScheme()</p>
+    </h2>
+    <p>Indicates the current either system or user preferred color scheme.</p>
     <pre><code id="code_view_2"></code></pre>
+    <h2>
+      <p class="app-code">setDarkScheme()</p>
+    </h2>
+    <p>Set's app to <i>dark</i> color scheme.</p>
+    <pre><code id="code_view_3"></code></pre>
+    <h2>
+      <p class="app-code">setLightScheme()</p>
+    </h2>
+    <p>Set's app to <i>light</i> color scheme.</p>
+    <pre><code id="code_view_4"></code></pre>
   </div>
 </body>
 <script src="../dist/windows-ui.min.js"></script>
 <script src="./js/navbarItems.js"></script>
-<script>init_navbar_ul("Alerts", "subdir")</script>
+<script>init_navbar_ul("Appearance", "subdir")</script>
 <script src="./js/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script>document.getElementById("code_view_1").innerHTML =
 hljs.highlightAuto(`
-<div class="app-alert" id="MyModal" data-win-toggle="modal" data-win-target="#MyModal" tabindex="-1">
-  <div class="app-alert-modal" aria-modal="true" role="dialog">
-    <div class="app-alert-header">
-      <h1>Alert</h1>
-      <div class="app-alert-message">This is alert Box.</div>
-    </div>
-    <div class="app-alert-footer">
-      <button class="app-btn app-btn-primary" type="button"
-        data-win-toggle="modal" data-win-target="#MyModal">
-        <span>OK to Close</span>
-      </button>
-    </div>
-  </div>
-</div>
+const colorScheme = Appearance.getColorScheme();
+  if (colorScheme === "dark") {
+    Appearance.setLightScheme()
+    // Do action on dark color scheme
+  }
 `).value;
 document.getElementById("code_view_2").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn" type="button" data-win-toggle="modal" data-win-target="#MyModal">
-  <span>Open Alert Default</span>
-</button>
+Appearance.getColorScheme();
+`).value;
+document.getElementById("code_view_3").innerHTML =
+hljs.highlightAuto(`
+Appearance.setDarkScheme();
+`).value;
+document.getElementById("code_view_4").innerHTML =
+hljs.highlightAuto(`
+Appearance.setLightScheme();
 `).value;</script>
 
 </html>
