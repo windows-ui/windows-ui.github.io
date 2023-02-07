@@ -78,76 +78,89 @@
     </nav>
   </div>
   <div class="app-page-container has-padding">
-    <h1>TableView</h1>
-    <div class="app-table-view-container">
-      <table class="app-table-view">
-        <thead>
-          <tr>
-            <th align="left">Fruits</th>
-            <th align="left">Energy (KCal)</th>
-            <th align="left">Color</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <td>Papaya</td>
-            <td>11845</td>
-            <td>Orange</td>
-          </tr>
-          <tr>
-            <td>Grapes</td>
-            <td>12867</td>
-            <td>Green</td>
-          </tr>
-          <tr>
-            <td>Apple</td>
-            <td>10867</td>
-            <td>Red</td>
-          </tr>
-        </tbody>
-      </table>
-    </div>
-    <h2>Usage</h2>
+    <h1>Colors</h1>
+    <p>List of <span class="app-color-primary">color </span>variables available by default that adapt changes as per the color scheme to either <b>light</b> or <b>dark</b>.
+      <br>
+    </p>
     <pre><code id="code_view_1"></code></pre>
+    <a href="https://github.com/windows-ui/colors" target="_blank" class="app-btn" style="width: 85%">
+      <b>View all --color-variables</b>
+    </a>
+    <h3>Source</h3>
+    <pre><code id="code_view_2"></code></pre>
+    <h2>app-config.css</h2>
+    <pre><code id="code_view_3A"></code></pre>
+    <p>
+      <b>app-config.css</b> file contains the <b>PrimaryColor</b>, <b>Fontfamily</b> used by the app.
+      <br />You can either import from framework or create like below:
+    </p>
+    <pre><code id="code_view_3"></code></pre>
+    <h2>Create your own color variables.</h2>
+    <p>Define your own <span class="app-color-primary">color variables </span>at anywhere like below:</p>
+    <pre><code id="code_view_4"></code></pre>
+    <h2>Define a component style as per theme.</h2>
+    <pre><code id="code_view_5"></code></pre>
+    <br />
+    <br />
     <br />
     <br />
   </div>
 </body>
 <script src="../dist/windows-ui.min.js"></script>
 <script src="./js/navbarItems.js"></script>
-<script>init_navbar_ul("TableView", "subdir")</script>
+<script>init_navbar_ul("Colors", "subdir")</script>
 <script src="./js/highlight.min.js"></script>
 <script>hljs.highlightAll()</script>
 <script>document.getElementById("code_view_1").innerHTML =
 hljs.highlightAuto(`
-<div class="app-table-view-container">
-  <table class="app-table-view">
-    <thead>
-      <tr>
-        <th align="left">Fruits</th>
-        <th align="left">Energy (KCal)</th>
-        <th align="left">Color</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>Papaya</td>
-        <td>11845</td>
-        <td>Orange</td>
-      </tr>
-      <tr>
-        <td>Grapes</td>
-        <td>12867</td>
-        <td>Green</td>
-      </tr>
-      <tr>
-        <td>Apple</td>
-        <td>10867</td>
-        <td>Red</td>
-      </tr>
-    </tbody>
-  </table>
-</div>
+--color-background-default: #ffffff;
+--color-button-default: #e9e9e9;
+--color-button-hover: #666666;
+--color-grey-light: #EEEEEE;
+....
+--color-navbar-bg-default: #F3F3F3;
+--color-text-default: #000000;
+`).value;
+document.getElementById("code_view_2").innerHTML =
+hljs.highlightAuto(`
+./windows-ui/src/scss/themes/
+`).value;
+document.getElementById("code_view_3A").innerHTML =
+hljs.highlightAuto(`
+<link href="https://cdn.jsdelivr.net/npm/windows-ui@4.0.0/dist/config/app-config.css" rel="stylesheet">
+`).value;
+document.getElementById("code_view_3").innerHTML =
+hljs.highlightAuto(`
+:root {
+  --PrimaryColor: #0078D7; /* Change of your choice */
+  --PrimaryColorLight: #60CDFF; /* Lighter version of --PrimaryColor for DarkMode */
+}
+body {
+  font-family: "Segoe UI";
+}
+
+[data-theme="dark"] ::selection {
+  color: #ffffff;
+  background-color: #2E517E;
+}
+`).value;
+document.getElementById("code_view_4").innerHTML =
+hljs.highlightAuto(`
+body {
+  --your-color-variable: #0078D7;
+}
+body.dark-theme {
+  --your-color-variable: #47aeff;
+}
+`).value;
+document.getElementById("code_view_5").innerHTML =
+hljs.highlightAuto(`
+.my-component {
+  background-color: #ffffff;
+}
+body.dark-theme .my-component {
+  background-color: #000000;
+}
 `).value;</script>
 
 </html>

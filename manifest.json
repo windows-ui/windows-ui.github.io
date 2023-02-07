@@ -1,6 +1,6 @@
 {
-  "short_name": "WinUIWeb",
-  "name": "Windows UI Web",
+  "short_name": "WinUI",
+  "name": "Windows UI",
   "icons": [
     {
       "src": "docs/public/favicon.ico",
