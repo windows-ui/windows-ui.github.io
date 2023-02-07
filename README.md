@@ -17,7 +17,7 @@
 <a href="https://github.com/virtualvivek/windows-ui">
   <img src="https://img.shields.io/badge/github-Repository-darklime.svg?style=flat&color=0078F0&logo=github" alt="github" />
 </a>
-<a href="https://www.npmjs.com/package/windows-ui">
+<a href="https://www.npmjs.com/package/windows-ui-fabric">
   <img src="https://img.shields.io/github/package-json/v/virtualvivek/windows-ui?style=flat&color=CB3837&logo=npm&logoColor=ffffff&label=npm"
     alt="npm" />
 </a>
