@@ -17,141 +17,142 @@
 </head>
 
 <body>
-  <div class="app-navbar-wrap" id="NavBarMain">
-    <div class="app-navbar-topbar-mobile">
-      <span class="app-navbar-toggler" data-win-toggle="navbar-left" data-win-target="#NavBarMain"></span>
-      <div style="display: flex; justify-content: space-between; width: calc(100% - 60px);">
-        <span class="app-navbar-name">Windows UI</span>
-        <span class="app-navbar-name">Home</span>
-      </div>
-    </div>
-    <nav class="app-navbar">
-      <div class="app-navbar-header">
-        <span class="app-navbar-toggler" data-win-toggle="navbar-left" data-win-target="#NavBarMain" aria-controls="NavBarMain" aria-label="Toggle navigation"></span>
-        <span class="app-navbar-name">Windows UI</span>
-      </div>
-      <ul class="app-navbar-list" id="app-navbar-list">
-        <label class="app-navbar-theme-switch">
-          <input id="app-navbar-theme-switch" type="checkbox" checked>
-          <div class="app-navbar-theme-switch-icon"></div>
-          <span id="app-navbar-theme-switch-text">Day Mode</span>
-        </label>
-        <li class="app-navbar-list-item">
-          <a href="./../index.html" class="">
-            <img src="./assets/mountain.jpg">
-            <span>Home</span>
-          </a>
-        </li>
-        <div class="app-navbar-submenu">
-          <div class="app-navbar-submenu-title" data-win-toggle="collapse" data-win-target="#NavSubMenu">
-            <div>Navigation</div>
-            <i class="icons10-angle-down"></i>
-          </div>
-          <div class="app-navbar-submenu-content" id="NavSubMenu">
-            <li class="app-navbar-list-item">
-              <a exact="false" class="" href="./navbar.html">
-                <i class="icons10-map"></i>
-                <span>NavBar</span>
-              </a>
-            </li>
-            <li class="app-navbar-list-item">
-              <a exact="false" class="" href="./navbarLink.html">
-                <i class="icons10-link"></i>
-                <span>NavBarLink</span>
-              </a>
-            </li>
-            <li class="app-navbar-list-item">
-              <a exact="false" class="" href="./navbarSubmenu.html">
-                <i class="icons10-angle-down"></i>
-                <span>NavBarSubMenu</span>
-              </a>
-            </li>
-            <li class="app-navbar-list-item">
-              <a exact="false" class="" href="./navpagecontainer.html">
-                <i class="icons10-columns"></i>
-                <span>PageContainer</span>
-              </a>
-            </li>
-          </div>
+  <div class="container-flex-row">
+    <aside class="app-navbar-wrap" id="NavBarMain">
+      <div class="app-navbar-header-mobile">
+        <span class="app-navbar-toggler" data-win-toggle="navbar-left" data-win-target="#NavBarMain"></span>
+        <div style="display: flex; justify-content: space-between; flex: 1;">
+          <span class="app-navbar-name">Windows UI</span>
+          <span class="app-navbar-name">Home</span>
         </div>
-      </ul>
-    </nav>
-  </div>
-  <div class="app-page-container has-padding">
-    <h1>Buttons</h1>
-    <button class="app-btn" type="button">
-      <span>Default Button</span>
-    </button>
-    <button class="app-btn" type="button">
-      <span>
+      </div>
+      <nav class="app-navbar">
+        <div class="app-navbar-header">
+          <span class="app-navbar-toggler" data-win-toggle="navbar-left" data-win-target="#NavBarMain" aria-controls="NavBarMain" aria-label="Toggle navigation"></span>
+          <span class="app-navbar-name">Windows UI</span>
+        </div>
+        <ul class="app-navbar-list" id="app-navbar-list">
+          <label class="app-navbar-theme-switch">
+            <input id="app-navbar-theme-switch" type="checkbox" checked>
+            <div class="app-navbar-theme-switch-icon"></div>
+            <span id="app-navbar-theme-switch-text">Day Mode</span>
+          </label>
+          <li class="app-navbar-list-item">
+            <a href="./../index.html" class="">
+              <img src="./assets/mountain.jpg">
+              <span>Home</span>
+            </a>
+          </li>
+          <div class="app-navbar-submenu">
+            <div class="app-navbar-submenu-title" data-win-toggle="collapse" data-win-target="#NavSubMenu" aria-expanded="false">
+              <span>Navigation</span>
+            </div>
+            <div class="app-navbar-submenu-content" id="NavSubMenu">
+              <li class="app-navbar-list-item">
+                <a exact="false" class="" href="./navbar.html">
+                  <i class="icons10-map"></i>
+                  <span>NavBar</span>
+                </a>
+              </li>
+              <li class="app-navbar-list-item">
+                <a exact="false" class="" href="./navbarLink.html">
+                  <i class="icons10-link"></i>
+                  <span>NavBarLink</span>
+                </a>
+              </li>
+              <li class="app-navbar-list-item">
+                <a exact="false" class="" href="./navbarSubmenu.html">
+                  <i class="icons10-angle-down"></i>
+                  <span>NavBarSubMenu</span>
+                </a>
+              </li>
+              <li class="app-navbar-list-item">
+                <a exact="false" class="" href="./navpagecontainer.html">
+                  <i class="icons10-columns"></i>
+                  <span>PageContainer</span>
+                </a>
+              </li>
+            </div>
+          </div>
+        </ul>
+      </nav>
+    </aside>
+    <div class="app-page-container has-padding">
+      <h1>Buttons</h1>
+      <button class="app-btn">
+        <span>Default Button</span>
+      </button>
+      <button class="app-btn app-btn-primary">
+        <span>Primary Button</span>
+      </button>
+      <button class="app-btn app-btn-secondary">
+        <span>Secondary Button</span>
+      </button>
+      <h2>Button Default</h2>
+      <button class="app-btn">
+        <span>Default Button</span>
+      </button>
+      <button class="app-btn">
         <i class="icons10-plus"></i>
-      </span>
-      <span>Button with icon</span>
-    </button>
-    <button class="app-btn" type="button" disabled>
-      <span>Button Disabled</span>
-    </button>
-    <pre><code id="code_view_1"></code></pre>
-    <h2>Button state loading</h2>
-    <button class="app-btn animate btn-is-loading" type="button">
-      <div class="app-loader-busy loader-sm animate"></div>
-      <span>Loading Button</span>
-    </button>
-    <pre><code id="code_view_2"></code></pre>
-    <h2>Button Primary</h2>
-    <button class="app-btn app-btn-primary" type="button">
-      <span>Button Regular</span>
-    </button>
-    <button class="app-btn app-btn-primary" type="button">
-      <span>
+        <span>Button with icon</span>
+      </button>
+      <button class="app-btn" disabled>
+        <span>Button Disabled</span>
+      </button>
+      <pre><code id="code_view_1"></code></pre>
+      <h2>Button state loading</h2>
+      <button class="app-btn animate btn-is-loading">
+        <div class="app-loader-busy loader-sm animate"></div>
+        <span>Loading Button</span>
+      </button>
+      <pre><code id="code_view_2"></code></pre>
+      <h2>Button Primary</h2>
+      <button class="app-btn app-btn-primary">
+        <span>Button Regular</span>
+      </button>
+      <button class="app-btn app-btn-primary">
         <i class="icons10-fantasy"></i>
-      </span>
-      <span>Primary Button</span>
-    </button>
-    <pre><code id="code_view_3"></code></pre>
-    <h2>Button Primary Outline</h2>
-    <button class="app-btn app-btn-primary-outline" type="button" title="Button tooltip title">
-      <span>Button Outline</span>
-    </button>
-    <button class="app-btn app-btn-primary-outline" type="button">
-      <span>
+        <span>Primary Button</span>
+      </button>
+      <pre><code id="code_view_3"></code></pre>
+      <h2>Button Primary Outline</h2>
+      <button class="app-btn app-btn-primary-outline" title="Button tooltip title">
+        <span>Button Outline</span>
+      </button>
+      <button class="app-btn app-btn-primary-outline">
         <i class="icons10-fantasy"></i>
-      </span>
-      <span>Primary Button</span>
-    </button>
-    <pre><code id="code_view_4"></code></pre>
-    <h2>Button Success</h2>
-    <button class="app-btn app-btn-success" type="button">
-      <span>Success Button</span>
-    </button>
-    <button class="app-btn app-btn-success-outline" type="button">
-      <span>
+        <span>Primary Button</span>
+      </button>
+      <pre><code id="code_view_4"></code></pre>
+      <h2>Button Success</h2>
+      <button class="app-btn app-btn-success">
+        <span>Success Button</span>
+      </button>
+      <button class="app-btn app-btn-success-outline">
         <i class="icons10-checkmark"></i>
-      </span>
-      <span>Success Button</span>
-    </button>
-    <pre><code id="code_view_5"></code></pre>
-    <h2>Button Danger</h2>
-    <button class="app-btn app-btn-danger" type="button">
-      <span>Danger Button</span>
-    </button>
-    <button class="app-btn app-btn-danger-outline" type="button">
-      <span>
+        <span>Success Button</span>
+      </button>
+      <pre><code id="code_view_5"></code></pre>
+      <h2>Button Danger</h2>
+      <button class="app-btn app-btn-danger">
+        <span>Danger Button</span>
+      </button>
+      <button class="app-btn app-btn-danger-outline">
         <i class="icons10-cross"></i>
-      </span>
-      <span>Danger Button</span>
-    </button>
-    <pre><code id="code_view_6"></code></pre>
-    <h1>Button Icon</h1>
-    <button class="app-btn-icon">
-      <i class="icons10-home"></i>
-    </button>
-    <button class="app-btn-icon">
-      <i class="icons10-share"></i>
-    </button>
-    <pre><code id="code_view_7"></code></pre>
-    <br />
-    <br />
+        <span>Danger Button</span>
+      </button>
+      <pre><code id="code_view_6"></code></pre>
+      <h1>Button as Icon:</h1>
+      <button class="app-btn app-btn-secondary">
+        <i class="icons10-home"></i>
+      </button>
+      <button class="app-btn app-btn-secondary">
+        <i class="icons10-share"></i>
+      </button>
+      <pre><code id="code_view_7"></code></pre>
+      <br />
+      <br />
+    </div>
   </div>
 </body>
 <script src="../dist/windows-ui.min.js"></script>
@@ -161,19 +162,19 @@
 <script>hljs.highlightAll()</script>
 <script>document.getElementById("code_view_1").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn" type="button">
+<button class="app-btn">
   <span>Default Button</span>
 </button>
 
-<button class="app-btn" type="button">
-  <span><i class="icons10-plus"></i></span>
+<button class="app-btn">
+  <i class="icons10-plus"></i>
   <span>Button with icon</span>
 </button>
 `).value;
 
 document.getElementById("code_view_2").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn animate btn-is-loading" type="button">
+<button class="app-btn animate btn-is-loading">
   <div class="app-loader-busy loader-sm animate"></div>
   <span>Loading Button</span>
 </button>
@@ -181,55 +182,55 @@ hljs.highlightAuto(`
 
 document.getElementById("code_view_3").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn app-btn-primary" type="button">
+<button class="app-btn app-btn-primary">
   <span>Button Regular</span>
 </button>
 
-<button class="app-btn app-btn-primary" type="button">
-  <span><i class="icons10-fantasy"></i></span>
+<button class="app-btn app-btn-primary">
+  <i class="icons10-fantasy"></i>
   <span>Primary Button</span>
 </button>
 `).value;
 
 document.getElementById("code_view_4").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn app-btn-primary-outline" type="button">
+<button class="app-btn app-btn-primary-outline">
   <span>Button Outline</span>
 </button>
 
-<button class="app-btn app-btn-primary-outline" type="button">
-  <span><i class="icons10-fantasy"></i></span>
+<button class="app-btn app-btn-primary-outline">
+  <i class="icons10-fantasy"></i>
   <span>Primary Button</span>
 </button>
 `).value;
 
 document.getElementById("code_view_5").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn app-btn-success" type="button">
+<button class="app-btn app-btn-success">
   <span>Success Button</span>
 </button>
 
-<button class="app-btn app-btn-success-outline" type="button">
-  <span><i class="icons10-checkmark"></i></span>
+<button class="app-btn app-btn-success-outline">
+  <i class="icons10-checkmark"></i>
   <span>Success Button</span>
 </button>
 `).value;
 
 document.getElementById("code_view_6").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn app-btn-danger" type="button">
+<button class="app-btn app-btn-danger">
   <span>Danger Button</span>
 </button>
 
-<button class="app-btn app-btn-danger-outline" type="button">
-  <span><i class="icons10-cross"></i></span>
+<button class="app-btn app-btn-danger-outline">
+  <i class="icons10-cross"></i>
   <span>Danger Button</span>
 </button>
 `).value;
 
 document.getElementById("code_view_7").innerHTML =
 hljs.highlightAuto(`
-<button class="app-btn-icon">
+<button class="app-btn app-btn-secondary">
   <i class="icons10-home"></i>
 </button>
 `).value;</script>
